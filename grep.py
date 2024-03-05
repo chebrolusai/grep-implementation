@@ -1,5 +1,6 @@
 import sys
 import re
+import util
 
 allowed_options = {'i','n','c','l','w'}
 command_options = set()
@@ -34,21 +35,4 @@ for argument in sys.argv[1:]:
         file_paths.append(argument)
 
 
-
-# Error handling
-for option in command_options:
-
-    if option not in allowed_options:
-        
-        print(error_text + "Invalid option " + option + "\n")
-        exit(1)
-
-if not search_string:
-
-    print(error_text + "You must specify the search string.\n")
-    exit(1)
-
-if not file_paths:
-
-    print(error_text + "You must specify atleast one file.\n")
-    exit(1)
+util.validate_input_arguments(search_string,command_options,file_paths)
