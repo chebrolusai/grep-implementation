@@ -6,6 +6,8 @@ allowed_options = {'i','n','c','l','w'}
 command_options = set()
 search_string   = ''
 file_paths      = []
+
+
 error_text = "\033[1;31mERROR: \033[0m"
 
 
