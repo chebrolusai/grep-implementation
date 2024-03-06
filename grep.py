@@ -46,6 +46,8 @@ MATCH_TYPE = util.get_pattern_matching_type(command_options,search_string)
 
 grep_result_object = {}
 
+matched_files = []
+
 for eachfile in file_paths:
 
     line_count     = 0
@@ -63,7 +65,10 @@ for eachfile in file_paths:
                 match_count += len(matches)
 
                 if 'l' in command_options:
-                    util.handle_Hcl_options(command_options,eachfile)
+                    matched_files.append(eachfile)
                     break
 
+
+if 'l' in command_options:
+    util.handle_Hcl_options(command_options,matched_files)
 
