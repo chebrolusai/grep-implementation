@@ -2,7 +2,7 @@ import sys
 import re
 import util
 
-allowed_options = {'i','n','c','l','w'}
+allowed_options = {'i','n','c','l','w','H'}
 command_options = set()
 search_string   = ''
 file_paths      = []
@@ -68,7 +68,31 @@ for eachfile in file_paths:
                     matched_files.append(eachfile)
                     break
 
+                if 'c' not in command_options:
+
+                    output_string = ''
+
+                    if 'H' in command_options or len(file_paths) > 1:
+
+                        output_string += f'{eachfile}:'
+                    
+                    if 'n' in command_options:
+                        output_string += f'{line_count}:'
+                    
+                    output_string += f'{line}'
+
+                    print(output_string.strip())
+        
+        if 'c' in command_options:
+            
+            if len(file_paths) > 1:
+
+                print(f'{eachfile}:{match_count}')
+            
+            else:
+                print(match_count)
+
 
 if 'l' in command_options:
+    
     util.handle_Hcl_options(command_options,matched_files)
-
