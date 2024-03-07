@@ -1,0 +1,98 @@
+Print Directly While Reading:
+Advantages:
+
+Memory Efficiency: This approach is more memory-efficient as it doesn't require storing the entire file in memory. It processes each line sequentially, and you only need to keep one line in memory at a time.
+Real-time Output: If you are dealing with a large file or streaming data, printing directly allows you to see the output in real-time rather than waiting for the entire file to be processed.
+Disadvantages:
+
+No Random Access: Once a line is processed and printed, you don't have easy access to it later. If you need to perform operations on the lines after processing, you might need to re-read the file.
+Read and Store in an Array First:
+Advantages:
+
+Random Access: You have all lines stored in memory, allowing for random access. This is beneficial if you need to perform operations on the lines multiple times.
+Simplified Logic: If your processing involves complex logic or multiple passes over the data, storing in an array can simplify the code.
+Disadvantages:
+
+Memory Usage: Storing all lines in an array can consume a significant amount of memory, especially for large files. This might not be suitable for very large files.
+Recommendations:
+If your file is relatively small or if you are processing it sequentially, printing directly while reading is a memory-efficient approach.
+If you need to perform multiple passes over the lines or if the file is too large to fit in memory comfortably, consider storing the lines in an array.
+In many cases, it's a trade-off between memory usage and processing speed. Choose the approach that best fits your specific needs and constraints.
+
+re.I
+re.IGNORECASE
+Perform case-insensitive matching; character class and literal strings will match letters by ignoring case. For example, [A-Z] will match lowercase letters, too. Full Unicode matching also works unless the ASCII flag is used to disable non-ASCII matches. When the Unicode patterns [a-z] or [A-Z] are used in combination with the IGNORECASE flag, they will match the 52 ASCII letters and 4 additional non-ASCII letters: ‘İ’ (U+0130, Latin capital letter I with dot above), ‘ı’ (U+0131, Latin small letter dotless i), ‘ſ’ (U+017F, Latin small letter long s) and ‘K’ (U+212A, Kelvin sign). Spam will match 'Spam', 'spam', 'spAM', or 'ſpam' (the latter is matched only in Unicode mode). This lowercasing doesn’t take the current locale into account; it will if you also set the LOCALE flag.
+re.L
+re.LOCALE
+Make \w, \W, \b, \B and case-insensitive matching dependent on the current locale instead of the Unicode database.
+
+Locales are a feature of the C library intended to help in writing programs that take account of language differences. For example, if you’re processing encoded French text, you’d want to be able to write \w+ to match words, but \w only matches the character class [A-Za-z] in bytes patterns; it won’t match bytes corresponding to é or ç. If your system is configured properly and a French locale is selected, certain C functions will tell the program that the byte corresponding to é should also be considered a letter. Setting the LOCALE flag when compiling a regular expression will cause the resulting compiled object to use these C functions for \w; this is slower, but also enables \w+ to match French words as you’d expect. The use of this flag is discouraged in Python 3 as the locale mechanism is very unreliable, it only handles one “culture” at a time, and it only works with 8-bit locales. Unicode matching is already enabled by default in Python 3 for Unicode (str) patterns, and it is able to handle different locales/languages.
+
+gjrengjreojg etrjohthte
+h
+teh
+et
+het
+htehethettn
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Donec tempus erat quis urna ultrices, sed fermentum neque tempor.
+Pellentesque at dolor viverra, egestas nisl vel, tempus sapien.
+Curabitur non est finibus, semper ex et, convallis neque.
+Vivamus tincidunt est in augue egestas, id venenatis elit venenatis.
+Phasellus eget orci sollicitudin, varius nisl at, sodales lorem.
+Aenean aliquet enim non tortor ullamcorper, ac consequat erat varius.
+Etiam vitae lectus lacinia, porta orci sed, viverra tellus.
+Nunc dignissim metus quis velit pulvinar, eget tempor tortor faucibus.
+Pellentesque nec libero at ex cursus pharetra.
+Duis mattis lectus vitae nulla finibus, nec aliquam enim finibus.
+Duis ultricies ex id molestie hendrerit.
+Proin a erat ut arcu gravida rhoncus id ornare ligula.
+Curabitur aliquam arcu eget est egestas, at malesuada nisi consequat.
+Morbi at augue cursus, porttitor leo convallis, mattis sem.
+In tempor felis eget feugiat vulputate.
+Sed sed enim sed nibh fermentum posuere quis ac nisl.
+Nulla vel magna malesuada, interdum enim at, lobortis libero.
+Maecenas vel magna pulvinar, lacinia diam sed, vestibulum erat.
+Cras malesuada dolor sed dolor ultrices, non imperdiet est malesuada.
+Aliquam a mi varius, varius nisi quis, luctus mauris.
+Nam placerat orci ut libero elementum ultrices.
+Nullam tristique neque et lectus condimentum sollicitudin.
+Suspendisse semper arcu sed semper blandit.
+I've rented a car in Las Vegas and have reserved a hotel in Twentynine Palms which is just north of Joshua Tree. We'll drive from Las Vegas through Mojave National Preserve and possibly do a short hike on our way down. Then spend all day on Monday at Joshua Tree. We can decide the next morning if we want to do more in Joshua Tree or Mojave before we head back.
+Her hand was balled into a fist with her keys protruding out from between her fingers. 
+This was the weapon her father had shown her 
+how to make when she walked alone to her car after work. She wished that she had something a little more potent than keys between her fingers. It would have been nice to have some mace or pepper spray. He had been meaning to buy some but had never gotten around to it. As the mother bear took another step forward with her cubs in tow, she knew her fist with keys wasn't going to be an adequate defense for this situation.
+The headphones were on. They had been utilized on purpose. She could hear her mom yelling in the ba
+ckground, but couldn't make out exactly what the yelling was about. That was exactly why she had put them on. She knew her mom would enter her room at any minute, and she could pretend that she hadn't heard any of the previous yelling.
+The choice was red, green, or blue. It didn't seem like an important choice when he was making it, but it was a choice nonetheless. Had he known the consequences at that time, he would likely have considered the choice a bit longer. In the end, he didn't and ended up choosing blue.
+They had always called it the green river. 
+It made sense. The river was green. The river likely 
+had a different official name, but to everyone in town, it was and had always been the green river. So it was with great surprise that on this day the green river was a fluorescent pink.
+There was something in the tree. It was difficult to tell from the ground, 
+but Rachael could see movement. She squinted her eyes and peered in the direction of the movement, trying to decipher exactly what she had spied. The more she peered, however, the more she thought it might be a figment of her imagination. Nothing seemed to move until the moment she began to take her eyes off the tree. Then in the corner of her eye, she would see the movement again and begin the process of staring again.
+There wasn't a whole lot he could do at that moment. He played the situation again and again
+ in his head looking at what he might have done differently to make the situation better. No matter how many times he relived the situation in his head, there was never really a good alternative course of action. There simply wasn't a whole lot he could have done in that particular moment.
+It was always the Monday mornings. It never seemed to happen on Tuesday morning, Wednesday morning, or any other morning during the week. But it happened every Monday morning like clockwork. He mentally prepared himself to once again deal with what was about to happen, but this time he also placed a knife in his pocket just in case.
+Was it enough? That was the question he kept 
+asking himself. Was being satisfied enough? He 
+looked around him at everyone yearning to just be satisfied in their daily life and he had reached that goal. He knew that he was satisfied and he also knew it wasn't going to be enough.
+There had to be a better way. That's all Nancy could think as she sat at her 
+desk staring at her computer screen. She'd already spent five years of her life in this little cubicle staring at her computer doing "work" that didn't seem to matter to anyone including her own boss. There had to be more to her life than this and there had to be a better way to make a living. That's what she was thinking when the earthquake struck.
+It had been her dream for years but Dana had failed to take any action toward making it come true. There had always been a good excuse to delay or prioritize another project. As she woke, she realized she was once again at a crossroads. Would it be another excuse or would she finally find the courage to pursue her dream? Dana rose and took her first step.
+April seriously wondered about her sleeping partner choices. She looked at her bed and what a mess it had become. How did she get to the point in her life where she had two dogs, three cats, and a raccoon sleeping with her every night?
+The irony of the situation hadn't escaped her. She had taken
+ years to sculpt the perfect persona with the perfect look that she shared on Instagram. She knew her hundreds of thousands of followers envied that life she showed and stayed engaged with her because they wanted that life too. The truth was that she wanted the perfect life she portrayed more than any of her fans. The fact was that despite all the perfection she shared on social media, her life was actually more of a mess than most.
+It wasn't that he hated her. It was simply that he didn't like her much. It was difficult for him to explain this to her, and even more difficult for her to truly understand. She was in love and wanted him to feel the same way. He didn't, and no matter how he tried to explain to her she refused to listen or to understand.
+The piano sat silently in the corner of the room. Nobody could remember the last time it had been played. The little girl walked up to it and hit a few of the keys. The sound of the piano rang throughout the house for the first time in years. In the upstairs room, confined to her bed, the owner of the house had tears in her eyes.
+At that moment he had a thought that he'd 
+never imagine he'd consider. "I could just cheat," he thought, "and that would solve the problem." He tried to move on from the thought but it was persistent. It didn't want to go away and, if he was honest with himself, he didn't want it to.
+There 
+was a time when he would have embraced the change that was coming. In his youth, he sought adventure and the unknown, but that had been years ago. He wished he could go back and learn to find the excitement that came with change but it was useless. That curiosity had long left him to where he had come to loathe anything that put him out of his comfort zone.
+
+leather jacked showed the scars of being his favorite for years. It wore those scars with pride, feeling that they enhanced his presence rather than diminishing it. The scars gave it character and had not overwhelmed to the point that it had become ratty. The jacket was in its prime and it knew it.
+She closed her eyes and then opened them again. What she was seeing just 
+
+didn't make sense. She shook her head seeing if that would help. It didn't. Although it seemed
+ beyond reality, there was no denying she was witnessing a large formation of alien spaceships filling the sky.
+It was a good idea. At least, they all thought it was a good idea at the time. Hindsight
+ would reveal that in reality, it was an unbelievably terrible idea, but it would take another week for them to understand that. Right now, at this very moment. they all agreed that it was the perfect course of action for the current situation.
