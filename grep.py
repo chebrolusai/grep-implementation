@@ -94,7 +94,7 @@ for eachfile in file_paths:
 
                         print(output_string.strip())
         
-        if 'c' in command_options:
+        if 'c' in command_options and 'l' not in command_options:
             
             if len(file_paths) > 1:
 
