@@ -57,25 +57,3 @@ def get_pattern_matching_type(command_options,search_string):
         MATCH_TYPE = CASE_INSENSITIVE
     
     return MATCH_TYPE
-
-
-def handle_Hcl_options(command_options,matched_files):
-
-    for each_file in matched_files:
-        output_string = ''
-
-        if 'c' in command_options and len(matched_files) > 1:
-
-            output_string = f'{each_file}:1'
-            
-            print(output_string)
-        
-        elif 'c' in command_options and len(matched_files) == 1:
-            output_string = '1'
-
-            if 'H' in command_options:
-                output_string = f'{each_file}:1'
-            
-            print(output_string)
-        
-        print(each_file)

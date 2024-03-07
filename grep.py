@@ -106,4 +106,21 @@ for eachfile in file_paths:
 
 if 'l' in command_options:
     
-    util.handle_Hcl_options(command_options,matched_files)
+    for each_file in matched_files:
+        output_string = ''
+
+        if 'c' in command_options and len(matched_files) > 1:
+
+            output_string = f'{each_file}:1'
+            
+            print(output_string)
+        
+        elif 'c' in command_options and len(matched_files) == 1:
+            output_string = '1'
+
+            if 'H' in command_options:
+                output_string = f'{each_file}:1'
+            
+            print(output_string)
+        
+        print(each_file)
