@@ -83,7 +83,10 @@ for eachfile in file_paths:
 
                         for each_match in matches:
 
-                            print(f'{output_string}:{each_match}')
+                            if output_string != '':
+                                print(f'{output_string}:{each_match}')
+                            else:
+                                print(each_match)
                     
                     else:
 
