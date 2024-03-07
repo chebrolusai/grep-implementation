@@ -1,0 +1,22 @@
+name: Unit Testing
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python with version 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+
+      - name: Run Unit tests
+        run: python unit_test.py
