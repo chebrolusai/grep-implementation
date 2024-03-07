@@ -2,7 +2,7 @@ import sys
 import re
 import util
 
-allowed_options = {'i','n','c','l','w','H'}
+allowed_options = {'i','n','c','l','w','H','o'}
 command_options = set()
 search_string   = ''
 file_paths      = []
@@ -62,7 +62,7 @@ for eachfile in file_paths:
 
             if len(matches):
 
-                match_count += len(matches)
+                match_count += 1
 
                 if 'l' in command_options:
                     matched_files.append(eachfile)
@@ -79,9 +79,17 @@ for eachfile in file_paths:
                     if 'n' in command_options:
                         output_string += f'{line_count}:'
                     
-                    output_string += f'{line}'
+                    if 'o' in command_options:
 
-                    print(output_string.strip())
+                        for each_match in matches:
+
+                            print(f'{output_string}:{each_match}')
+                    
+                    else:
+
+                        output_string += f'{line}'
+
+                        print(output_string.strip())
         
         if 'c' in command_options:
             

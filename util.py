@@ -1,7 +1,7 @@
 import os
 import re
 
-allowed_options = {'i','n','c','l','w','H'}
+allowed_options = {'i','n','c','l','w','H','o'}
 ERROR_TEXT = "\033[1;31mERROR: \033[0m"
 
 def validate_input_arguments( search_string,command_options,file_paths ):
